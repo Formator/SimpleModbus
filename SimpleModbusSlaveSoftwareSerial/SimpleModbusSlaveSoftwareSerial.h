@@ -1,5 +1,5 @@
-#ifndef SIMPLE_MODBUS_SLAVE_H
-#define SIMPLE_MODBUS_SLAVE_H
+#ifndef SIMPLE_MODBUS_SLAVE_SOFTWARESERIAL_H
+#define SIMPLE_MODBUS_SLAVE_SOFTWARESERIAL_H
 
 // SimpleModbusSlaveV10
 
@@ -51,11 +51,12 @@
 */
 
 #include "Arduino.h"
+#include "SoftwareSerial.h"
 
 // function definitions
 unsigned int modbus_update();
 void modbus_update_comms(long baud, unsigned char byteFormat, unsigned char _slaveID);
-void modbus_configure(HardwareSerial *SerialPort,
+void modbus_configure(SoftwareSerial *SerialPort,
 											long baud,
 											unsigned char byteFormat,
 											unsigned char _slaveID, 
